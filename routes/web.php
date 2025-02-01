@@ -14,19 +14,10 @@ use App\Http\Controllers\RiwayatKerusakanController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('peminjaman', function () {
-    return view('peminjaman.index');
-});
-
-Route::get('sidebar', function() {
-    return view('sidebar');
-});
-
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -59,7 +50,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('riwayat-kerusakan/{id}/edit', [RiwayatKerusakanController::class, 'edit']);
     Route::post('riwayat-kerusakan/{id}/update', [RiwayatKerusakanController::class, 'update']);
     Route::get('riwayat-kerusakan/{id}/destroy', [RiwayatKerusakanController::class, 'destroy']);
-    
+
+    //Routes Peminjman
+    Route::get('peminjaman', function () {
+        return view('peminjaman.index');
+    });
+
     // Routes Peminjaman Barang
     Route::get('peminjaman-barang', [PeminjamanBarangController::class, 'index'])->name('pb');
     Route::get('peminjaman-barang/create', [PeminjamanBarangController::class, 'create']);
@@ -94,13 +90,13 @@ Route::middleware(['auth'])->group(function () {
     Route::post('peminjaman-ruangan/{id}/update', [PeminjamanRuanganController::class, 'update']);
     Route::get('peminjaman-ruangan/{id}/destroy', [PeminjamanRuanganController::class, 'destroy']);
 
-    // Routes Detail Peminjaman Ruangan 
+    // Routes Detail Peminjaman Ruangan
     Route::get('peminjaman-ruangan/dp/create', [DpRuanganController::class, 'create'])->name('dp');
     Route::post('peminjaman-ruangan/dp/store', [DpRuanganController::class, 'store']);
     Route::get('peminjaman-ruangan/dp/{No_kop}/edit', [DpRuanganController::class, 'edit'])->name('dpe');
     Route::post('peminjaman-ruangan/dp/{No_kop}/update', [DpRuanganController::class, 'update'])->name('dpu');
     Route::get('peminjaman-ruangan/dp/{No_kop}/destroy', [DpRuanganController::class, 'destroy'])->name('dpd');
- 
+
 });
 
 require __DIR__.'/auth.php';

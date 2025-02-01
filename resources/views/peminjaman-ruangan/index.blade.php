@@ -3,7 +3,7 @@
 @section('title', 'Daftar Peminjaman Barang')
 
 @section('content')
-    <h1 class="text-center mb-1">List Surat Peminjaman Ruangan</h1>
+    <h1 class="text-3xl text-center font-bold text-dark mb-2">List Surat Peminjaman Ruangan</h1>
 
     @if (session('success'))
     <script>
@@ -27,7 +27,7 @@
             <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
         </div>
     </form>
-    
+
     <div class="table-responsive">
         <table class="table table-bordered table-hover">
             <thead class="table-dark">
@@ -41,7 +41,7 @@
                 </tr>
             </thead>
             <tbody>
-                
+
                 @if ($peminjamans->count() == 0)
                 <tr>
                     <td colspan="6" class="text-center">Data tidak ditemukan</td>

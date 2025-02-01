@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container mt-0">
-    <h1 class="text-center mb-1">Riwayat Kerusakan</h1>
+    <h1 class="text-3xl text-center font-bold text-dark mb-2">Riwayat Kerusakan</h1>
 
     @if (session('success'))
     <script>

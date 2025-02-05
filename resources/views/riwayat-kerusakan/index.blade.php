@@ -24,7 +24,7 @@
 
     <form method="GET">
         <div class="input-group mb-1">
-            <input type="text" name="title" value="{{ $id }}" class="form-control" placeholder="Search kerusakan" aria-label="Search kerusakan" aria-describedby="button-addon2">
+            <input type="text" name="title" value="{{ $id }}" class="form-control" placeholder="Search kerusakan" aria-label="Search title" aria-describedby="button-addon2">
             <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
         </div>
     </form>

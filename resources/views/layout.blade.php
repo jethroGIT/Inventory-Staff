@@ -14,6 +14,7 @@
         html {
             overflow-y: scroll;
         }
+
         .sidebar {
             height: 100vh;
             width: 250px;
@@ -24,22 +25,27 @@
             padding-top: 20px;
             overflow-y: auto;
         }
+
         .sidebar h4 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
+
         .sidebar .nav-link {
             font-size: 1rem;
             padding: 10px 20px;
         }
+
         .sidebar .nav-link:hover {
             background-color: #c5cfd86c;
             border-radius: 4px;
         }
+
         .main-content {
             margin-left: 250px;
             padding: 20px;
         }
+
         .navbar {
             margin-left: 250px;
             border-bottom: 2px solid #e9ecef;

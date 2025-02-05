@@ -4,7 +4,7 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <div >
+    <div>
         <h1 class="text-3xl font-bold text-dark mb-4">Dashboard</h1>
 
         <div class="row">
@@ -13,7 +13,8 @@
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
                         <h2 class="card-title text-primary fw-bold">Peminjaman Ruangan</h2> <!-- Tambahkan fw-bold -->
-                        <p class="card-text">Menunggu Persetujuan: <span class="fw-bold text-primary">{{ $pRuangan }}</span></p>
+                        <p class="card-text">Menunggu Persetujuan: <span
+                                class="fw-bold text-primary">{{ $pRuangan }}</span></p>
                     </div>
                 </div>
             </div>
@@ -23,7 +24,8 @@
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
                         <h2 class="card-title text-success fw-bold">Peminjaman Barang</h2> <!-- Tambahkan fw-bold -->
-                        <p class="card-text">Menunggu Persetujuan: <span class="fw-bold text-success">{{ $pBarang }}</span></p>
+                        <p class="card-text">Menunggu Persetujuan: <span
+                                class="fw-bold text-success">{{ $pBarang }}</span></p>
                     </div>
                 </div>
             </div>
